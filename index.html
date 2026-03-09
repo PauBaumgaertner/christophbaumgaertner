@@ -6,239 +6,40 @@
   <title>Dr. Christoph Baumgärtner</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: #0a0a0a;
-      color: #e0e0e0;
-      font-family: 'Georgia', serif;
-      line-height: 1.8;
-    }
-
+    body { background: #0a0a0a; color: #e0e0e0; font-family: 'Georgia', serif; line-height: 1.8; }
     a { color: #c9a96e; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    header {
-      padding: 80px 40px 60px;
-      max-width: 760px;
-      margin: 0 auto;
-      border-bottom: 1px solid #222;
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      font-weight: normal;
-      letter-spacing: 0.02em;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-
-    header .subtitle {
-      font-size: 1rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    header .tagline {
-      font-size: 1rem;
-      color: #bbb;
-      max-width: 520px;
-      border-left: 2px solid #c9a96e;
-      padding-left: 16px;
-    }
-
-    section {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 50px 40px;
-      border-bottom: 1px solid #1a1a1a;
-    }
-
-    section h2 {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #555;
-      margin-bottom: 32px;
-    }
-
-    .about p {
-      color: #ccc;
-      margin-bottom: 16px;
-      font-size: 0.97rem;
-    }
-
-    .about blockquote {
-      border-left: 2px solid #c9a96e;
-      padding-left: 16px;
-      margin-top: 24px;
-      color: #888;
-      font-style: italic;
-      font-size: 0.92rem;
-    }
-
-    /* Photo gallery */
-    .photo-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .photo-grid img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 3px;
-      filter: grayscale(20%);
-      transition: filter 0.3s;
-    }
-
-    .photo-grid img:hover {
-      filter: grayscale(0%);
-    }
-
-    .edu-item, .work-item {
-      margin-bottom: 22px;
-    }
-
-    .edu-item strong, .work-item strong {
-      color: #fff;
-      display: block;
-      font-size: 0.97rem;
-    }
-
-    .edu-item span, .work-item span {
-      color: #666;
-      font-size: 0.85rem;
-    }
-
-    .post {
-      background: #111;
-      border: 1px solid #1e1e1e;
-      border-radius: 4px;
-      padding: 28px;
-      margin-bottom: 24px;
-    }
-
-    .post h3 {
-      font-size: 1rem;
-      color: #fff;
-      margin-bottom: 14px;
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    .post p {
-      font-size: 0.88rem;
-      color: #999;
-      line-height: 1.75;
-      margin-bottom: 10px;
-    }
-
-    .post .highlight {
-      color: #c9a96e;
-      font-weight: bold;
-    }
-
-    .post .post-link {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 0.8rem;
-      color: #c9a96e;
-      border: 1px solid #2a2a2a;
-      padding: 6px 14px;
-      border-radius: 2px;
-      transition: border-color 0.2s;
-    }
-
-    .post .post-link:hover {
-      border-color: #c9a96e;
-      text-decoration: none;
-    }
-
-    .publication {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      background: #0f0f0f;
-      border: 1px solid #1e1e1e;
-      border-radius: 4px;
-      padding: 24px;
-      margin-bottom: 16px;
-      transition: border-color 0.2s;
-    }
-
-    .publication:hover {
-      border-color: #333;
-    }
-
-    .pub-icon {
-      font-size: 1.6rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .pub-content h3 {
-      font-size: 0.95rem;
-      color: #fff;
-      margin-bottom: 6px;
-      font-weight: normal;
-    }
-
-    .pub-content p {
-      font-size: 0.83rem;
-      color: #666;
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .download-btn {
-      display: inline-block;
-      font-size: 0.78rem;
-      color: #c9a96e;
-      border: 1px solid #2a2a2a;
-      padding: 5px 14px;
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-
-    .download-btn:hover {
-      border-color: #c9a96e;
-      text-decoration: none;
-      background: rgba(201,169,110,0.05);
-    }
-
-    .contact-list {
-      list-style: none;
-    }
-
-    .contact-list li {
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-      color: #bbb;
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .contact-list li span {
-      color: #444;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      min-width: 80px;
-    }
-
-    footer {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px;
-      color: #2a2a2a;
-      font-size: 0.78rem;
-    }
-
+    header { padding: 80px 40px 60px; max-width: 760px; margin: 0 auto; border-bottom: 1px solid #222; }
+    header h1 { font-size: 2.4rem; font-weight: normal; letter-spacing: 0.02em; color: #fff; margin-bottom: 8px; }
+    header .subtitle { font-size: 1rem; color: #888; font-style: italic; margin-bottom: 20px; }
+    header .tagline { font-size: 1rem; color: #bbb; max-width: 520px; border-left: 2px solid #c9a96e; padding-left: 16px; }
+    section { max-width: 760px; margin: 0 auto; padding: 50px 40px; border-bottom: 1px solid #1a1a1a; }
+    section h2 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: #555; margin-bottom: 32px; }
+    .about p { color: #ccc; margin-bottom: 16px; font-size: 0.97rem; }
+    .about blockquote { border-left: 2px solid #c9a96e; padding-left: 16px; margin-top: 24px; color: #888; font-style: italic; font-size: 0.92rem; }
+    .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+    .photo-grid img { width: 100%; height: 280px; object-fit: cover; object-position: center top; border-radius: 3px; filter: grayscale(20%); transition: filter 0.3s; }
+    .photo-grid img:hover { filter: grayscale(0%); }
+    .edu-item, .work-item { margin-bottom: 22px; }
+    .edu-item strong, .work-item strong { color: #fff; display: block; font-size: 0.97rem; }
+    .edu-item span, .work-item span { color: #666; font-size: 0.85rem; }
+    .post { background: #111; border: 1px solid #1e1e1e; border-radius: 4px; padding: 28px; margin-bottom: 24px; }
+    .post h3 { font-size: 1rem; color: #fff; margin-bottom: 14px; font-weight: normal; font-style: italic; }
+    .post p { font-size: 0.88rem; color: #999; line-height: 1.75; margin-bottom: 10px; }
+    .post .highlight { color: #c9a96e; font-weight: bold; }
+    .post .post-link { display: inline-block; margin-top: 14px; font-size: 0.8rem; color: #c9a96e; border: 1px solid #2a2a2a; padding: 6px 14px; border-radius: 2px; transition: border-color 0.2s; }
+    .post .post-link:hover { border-color: #c9a96e; text-decoration: none; }
+    .publication { display: flex; align-items: flex-start; gap: 20px; background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s; }
+    .publication:hover { border-color: #333; }
+    .pub-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .pub-content h3 { font-size: 0.95rem; color: #fff; margin-bottom: 6px; font-weight: normal; }
+    .pub-content p { font-size: 0.83rem; color: #666; margin-bottom: 12px; line-height: 1.6; }
+    .download-btn { display: inline-block; font-size: 0.78rem; color: #c9a96e; border: 1px solid #2a2a2a; padding: 5px 14px; border-radius: 2px; transition: all 0.2s; }
+    .download-btn:hover { border-color: #c9a96e; text-decoration: none; background: rgba(201,169,110,0.05); }
+    .contact-list { list-style: none; }
+    .contact-list li { margin-bottom: 16px; font-size: 0.95rem; color: #bbb; display: flex; align-items: baseline; gap: 16px; }
+    .contact-list li span { color: #444; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; min-width: 80px; }
+    footer { max-width: 760px; margin: 0 auto; padding: 40px; color: #2a2a2a; font-size: 0.78rem; }
     @media (max-width: 600px) {
       header, section, footer { padding-left: 24px; padding-right: 24px; }
       header h1 { font-size: 1.7rem; }
@@ -249,26 +50,22 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Dr. Christoph Baumgärtner</h1>
     <div class="subtitle">Geschäftsführender Gesellschafter · ja-dialog</div>
     <p class="tagline">„Wenn sich Produktqualität immer mehr annähert, entscheidet sich der Erfolg durch Service."</p>
   </header>
-
   <section class="about">
     <h2>Über mich</h2>
     <p>Dr. Christoph Baumgärtner ist Maschinenbauingenieur (TUM) und promovierte an der University of Cambridge. Nach Stationen bei Bain & Company und verschiedenen Mittelständlern als Geschäftsführer ist er heute geschäftsführender Gesellschafter der ja-dialog Gruppe. Er ist ausgewiesener Kundenservice-Experte und veröffentlicht regelmäßig zu Themen KI und Digitalisierung.</p>
     <blockquote>
       Bereits vor zwei Jahren stellte er das Konzept der „KI Low Road" vor: KI sollte demnach nicht mit klarem Zielbild und fester Planung eingeführt werden, sondern sich über Piloten, Beobachtung, schrittweises Lernen und Anpassung entwickeln — als „Emergent Strategy", die sich an der Realität orientiert statt an starren Zielbildern.
     </blockquote>
-
     <div class="photo-grid">
       <img src="WhatsApp_Image_2026-03-07_at_09_27_38__1_.jpeg" alt="Dr. Christoph Baumgärtner beim Vortrag" />
       <img src="WhatsApp_Image_2026-03-07_at_09_27_38.jpeg" alt="Dr. Christoph Baumgärtner auf dem Podium" />
     </div>
   </section>
-
   <section>
     <h2>Ausbildung</h2>
     <div class="edu-item">
@@ -280,34 +77,16 @@
       <span>Technische Universität München · 1990–1995</span>
     </div>
   </section>
-
   <section>
     <h2>Beruflicher Werdegang</h2>
-    <div class="work-item">
-      <strong>Geschäftsführender Gesellschafter – ja-dialog</strong>
-      <span>2015 bis heute · Kundenservice, Backoffice & BPO-Dienstleistung</span>
-    </div>
-    <div class="work-item">
-      <strong>Geschäftsführender Gesellschafter – Perry & Knorr GmbH</strong>
-      <span>2008–2014 · Metropolregion Berlin/Brandenburg</span>
-    </div>
-    <div class="work-item">
-      <strong>Geschäftsführender Gesellschafter – Ernst Dobler Maschinenbau GmbH</strong>
-      <span>2006–2009 · Bayern</span>
-    </div>
-    <div class="work-item">
-      <strong>Geschäftsführer – MZ (Motorrad und Zweiradwerke GmbH)</strong>
-      <span>2005–2006 · Zschopau</span>
-    </div>
-    <div class="work-item">
-      <strong>Case Team Lead – Bain & Company</strong>
-      <span>2000–2004</span>
-    </div>
+    <div class="work-item"><strong>Geschäftsführender Gesellschafter – ja-dialog</strong><span>2015 bis heute · Kundenservice, Backoffice & BPO-Dienstleistung</span></div>
+    <div class="work-item"><strong>Geschäftsführender Gesellschafter – Perry & Knorr GmbH</strong><span>2008–2014 · Metropolregion Berlin/Brandenburg</span></div>
+    <div class="work-item"><strong>Geschäftsführender Gesellschafter – Ernst Dobler Maschinenbau GmbH</strong><span>2006–2009 · Bayern</span></div>
+    <div class="work-item"><strong>Geschäftsführer – MZ (Motorrad und Zweiradwerke GmbH)</strong><span>2005–2006 · Zschopau</span></div>
+    <div class="work-item"><strong>Case Team Lead – Bain & Company</strong><span>2000–2004</span></div>
   </section>
-
   <section>
     <h2>Veröffentlichungen</h2>
-
     <div class="publication">
       <div class="pub-icon">📄</div>
       <div class="pub-content">
@@ -316,7 +95,6 @@
         <a class="download-btn" href="Beim_Thema_KI_habe_ich_mich_getäuscht_TeleTalk_02-25.pdf" download>↓ PDF herunterladen</a>
       </div>
     </div>
-
     <div class="publication">
       <div class="pub-icon">📄</div>
       <div class="pub-content">
@@ -325,7 +103,6 @@
         <a class="download-btn" href="Welche_KI-Anwendungen-Umfrageergebnisse.pdf" download>↓ PDF herunterladen</a>
       </div>
     </div>
-
     <div class="publication">
       <div class="pub-icon">📄</div>
       <div class="pub-content">
@@ -334,33 +111,23 @@
         <a class="download-btn" href="Weißbuch-Honda_V2.pdf" download>↓ PDF herunterladen</a>
       </div>
     </div>
-
   </section>
-
   <section>
     <h2>Gedanken & LinkedIn-Beiträge</h2>
-
     <div class="post">
       <h3>„Strategie ist doof" – Kundenzentrierung rules</h3>
       <p>Die 25-köpfige Führungsmannschaft der ja-dialog-Gruppe traf sich in Bad Belzig zur Jahresauftakt- und Strategieveranstaltung.</p>
-      <p><span class="highlight">Wichtigstes Outcome:</span> Kundenzentrierung ist und bleibt Top-Prio 0.1 Alpha. Die ja-dialog-Gruppe verfolgt eine „emergent strategy" — weniger vorausplanen, die Bedürfnisse der Auftraggeber genauer beobachten, schneller lernen.</p>
-      <p>Kundenzentriert und bevorzugter Dienstleister aller Auftraggeber zu sein — das sind die finalen Maximen jeder Aktivität.</p>
+      <p><span class="highlight">Wichtigstes Outcome:</span> Kundenzentrierung ist und bleibt Top-Prio 0.1 Alpha.</p>
       <a class="post-link" href="https://www.linkedin.com/in/dr-christoph-baumg%C3%A4rtner-74ab71189/" target="_blank">→ Auf LinkedIn lesen</a>
     </div>
-
     <div class="post">
       <h3>Der Produktivitätsirrtum der KI – Beobachtungen vom Mobile World Congress in Barcelona</h3>
       <p>Ich war auf dem MWC26 in Barcelona – einer der wichtigsten Messen der Zeit.</p>
       <p><span class="highlight">👉 KI produziert vor allem mehr Dinge. Aber sie wird uns keine Zeit sparen.</span></p>
-      <p>Hunderte Startups, hunderte Pitches, hunderte Vorträge — und irgendwann konnte ich nichts mehr aufnehmen. Wir erleben gerade ein neues Paradox: KI verspricht Effizienz. Aber wir produzieren einfach nur viel mehr.</p>
-      <p>Vor Jahrzehnten prägte der Philosoph Ivan Illich dafür einen Begriff: <em>Antiproduktivität</em>. Technologien sparen zunächst Zeit — bis sie so viel zusätzliche Aktivität erzeugen, dass der Effekt ins Gegenteil kippt.</p>
       <p>Die echte Herausforderung im KI-Zeitalter wird nicht sein, zu produzieren. Sondern <span class="highlight">Aufmerksamkeit zu priorisieren.</span></p>
-      <p style="color:#555; font-size:0.82rem;">PS.: Und nein, ich bin kein KI-Gegner. Ich frage mich nur, ob wir gerade die richtigen Fragen stellen.</p>
       <a class="post-link" href="https://www.linkedin.com/in/dr-christoph-baumg%C3%A4rtner-74ab71189/" target="_blank">→ Auf LinkedIn lesen</a>
     </div>
-
   </section>
-
   <section>
     <h2>Kontakt</h2>
     <ul class="contact-list">
@@ -370,10 +137,6 @@
       <li><span>ja-dialog</span> <a href="https://www.ja-dialog.de" target="_blank">ja-dialog.de</a></li>
     </ul>
   </section>
-
-  <footer>
-    © 2026 Dr. Christoph Baumgärtner
-  </footer>
-
+  <footer>© 2026 Dr. Christoph Baumgärtner</footer>
 </body>
 </html>
